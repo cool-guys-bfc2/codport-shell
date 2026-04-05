@@ -1,4 +1,5 @@
-install() {
+mkdir -p "$HOME/bin/codeport"
+cmd() {
   local filename="$1"
   local target_dir="$HOME/bin/codeport"
   local url="https://raw.githubusercontent.com/cool-guys-bfc2/codport-shell/refs/heads/main/src/${filename}.sh"
@@ -21,3 +22,5 @@ baseexec() {
   echo "Installed ${filename} to ${target_dir}"
 }
 baseexec codeport
+cmd pkg
+cmd install
