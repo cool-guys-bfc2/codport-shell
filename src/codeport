@@ -1,0 +1,4 @@
+#!/bin/bash
+SUBCOMMAND=$1
+shift  # Remove the subcommand from the argument list
+~/bin/codeport/"$SUBCOMMAND".sh "$@"
