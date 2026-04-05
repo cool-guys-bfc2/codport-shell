@@ -20,4 +20,4 @@ while IFS= read -r line || [[ -n "$line" ]]; do
     fi
     var=$((var + 1))
     echo "Processing: $line"
-done < <(curl -s "${url}")
+done < <(cat "~/pkg/${url}.txt")
