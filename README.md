@@ -1,11 +1,11 @@
 # codport-shell
 A system flexible installer tool
 # Commands
-**cp pkg [package name] [arguments]**
+**cp-pkg [package name] [arguments]**
 Run package
-**cp install [package name] [url for text file]**
+**cp-install [package name] [url for text file]**
 Install package manually
-**cp fetch [package name]**
+**cp-fetch [package name]**
 Install package from CP database
 # CP Database
 Supported packages:
