@@ -14,8 +14,7 @@ term() {
     source ${fn} '\$1' '\$2'
   fi
   }"
-  echo "${code}" >> "$HOME/.bashrc"
-  echo "${code}" >> "$HOME/.zshrc"
+  echo "${code}" > "$HOME/cpf.sh"
 }
 cmd() {
   local name="$1"
@@ -36,8 +35,8 @@ if [ -f "$HOME/bin/cpconfig.txt" ]; then
     echo "state=update" > "$HOME/bin/cpconfig.txt"
 fi
 if [ ! -f "$HOME/bin/cpconfig.txt" ]; then
-    echo 'export PATH="$PATH:$HOME/bin"' >> "$HOME/.bashrc"
-    echo 'export PATH="$PATH:$HOME/bin"' >> "$HOME/.zshrc"
+    echo "source '\$HOME/cpf.sh'" >> "$HOME/.bashrc"
+    echo "source '\$HOME/cpf.sh'" >> "$HOME/.zshrc"
     echo "state=new" > "$HOME/bin/cpconfig.txt"
 fi
 config=$(cat "$HOME/bin/cpconfig.txt")
