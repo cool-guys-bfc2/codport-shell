@@ -1,5 +1,5 @@
 pkg
-python3-mac
+python3-linux
 download
 https://raw.githubusercontent.com/python/cpython/refs/heads/main/install-sh
 bash
