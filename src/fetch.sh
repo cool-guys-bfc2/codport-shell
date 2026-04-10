@@ -11,7 +11,7 @@ if [[ "$os_type" == *"mingw"* || "$os_type" == *"msys"* || "$os_type" == *"cygwi
 fi
 # 3. Construct the system-dependent URL
 # This assumes you have files like 'package_linux.txt' or 'package_darwin.txt'
-url="https://raw.githubusercontent.com/cool-guys-bfc2/codport-shell/refs/heads/main/pkgs/${name}/${name}_${os_type}.txt"
+url="https://cool-guys-bfc2.github.io/codport-shell/pkgs/${name}/${name}_${os_type}.txt"
 
 echo "Detected OS: ${os_type}"
 echo "Installing package at ${url} as ${name}!"
