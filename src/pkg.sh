@@ -27,7 +27,14 @@ docmd() {
     chmod +x $f
     source $f > "output.log"
   fi
-  
+  if [ "$a"=="execarg" ]; then
+    chmod +x $f
+    source $f "${args}"
+  fi
+  if [ "$a"=="execute" ]; then
+    chmod +x $f
+    source $f "${args}" > "output.log"
+  fi
 }
 while IFS= read -r line || [[ -n "$line" ]]; do
     # Perform actions on each line
