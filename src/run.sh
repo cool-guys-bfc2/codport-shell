@@ -1,5 +1,5 @@
 mkdir -p "$HOME/bin/cpd"
-touch "$HOME/cpf.sh"
+echo "" > "$HOME/cpf.sh"
 term() {
   local name="$1"
   local fn="$2"
@@ -15,7 +15,7 @@ term() {
     source ${fn} \$1 \$2
   fi
   }"
-  echo "${code}" > "$HOME/cpf.sh"
+  echo "${code}" >> "$HOME/cpf.sh"
 }
 cmd() {
   local name="$1"
@@ -43,4 +43,3 @@ fi
 config=$(cat "$HOME/bin/cpconfig.txt")
 echo "Config data: "
 echo "${config}"
-
