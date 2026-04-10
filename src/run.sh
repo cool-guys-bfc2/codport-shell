@@ -32,6 +32,7 @@ cmd() {
 cmd pkg 1
 cmd install 2
 cmd fetch 1
+cmd on 2
 if [ -f "$HOME/bin/cpconfig.txt" ]; then
     echo "state=update" > "$HOME/bin/cpconfig.txt"
 fi
