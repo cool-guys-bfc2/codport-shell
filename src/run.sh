@@ -1,4 +1,5 @@
 mkdir -p "$HOME/bin/cpd"
+touch "$HOME/cpf.sh"
 term() {
   local name="$1"
   local fn="$2"
