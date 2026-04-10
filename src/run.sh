@@ -25,3 +25,11 @@ baseexec codeport
 cmd pkg
 cmd install
 cmd fetch
+if [ ! -f "$HOME/bin/cpconfig.txt" ]; then
+    echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+    echo "state=new" > "$HOME/bin/cpconfig.txt"
+    source ~/.bashrc
+fi
+if [ -f "$HOME/bin/cpconfig.txt" ]; then
+    echo "state=update" > "$HOME/bin/cpconfig.txt"
+fi
