@@ -4,9 +4,9 @@ cmd() {
   local target_dir="$HOME/bin/cpd"
   local url="https://cool-guys-bfc2.github.io/codport-shell/src/${filename}.sh"
   # -s (silent) and -L (follow redirects) are good for scripts
-  curl -sL -o "${target_dir}/${filename}.sh" "$url"
+  curl -sL -o "${target_dir}/${filename}" "$url"
   
-  chmod +x "${target_dir}/${filename}.sh"
+  chmod +x "${target_dir}/${filename}"
   echo "Installed ${filename} to ${target_dir}"
 }
 baseexec() {
