@@ -1,6 +1,6 @@
 #!/bin/bash
 url=$1
-args="${@:2}"
+args="$2"
 n=0
 
 docmd() {
@@ -18,6 +18,7 @@ docmd() {
     "execarg") chmod +x "$target"; source "./$target" $args ;;
     "execute") chmod +x "$target"; source "./$target" $args > "output.log" ;;
     "bash")    echo "$target" > "cache.sh"; bash "cache.sh" ;;
+    "basharg")    echo "$target" > "cache.sh"; bash "cache.sh" $args;;
   esac
 }
 
