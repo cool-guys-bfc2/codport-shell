@@ -13,11 +13,11 @@ baseexec() {
   local filename="$1"
   local target_dir="$HOME/bin"
   local url="https://cool-guys-bfc2.github.io/codport-shell/src/${filename}.sh"
-  rm -f "${target_dir}/${filename}"
+  rm -f "${target_dir}/${filename}.sh"
   # -s (silent) and -L (follow redirects) are good for scripts
-  curl -sL -o "${target_dir}/${filename}" "$url"
+  curl -sL -o "${target_dir}/${filename}.sh" "$url"
   
-  chmod +x "${target_dir}/${filename}"
+  chmod +x "${target_dir}/${filename}.sh"
   echo "Installed ${filename} to ${target_dir}"
 }
 baseexec cp
