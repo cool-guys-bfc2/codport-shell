@@ -36,6 +36,7 @@ cmd fetch 1
 cmd on 2
 cmd delete 1
 cmd update 0
+cmd configure 0
 if [ -f "$HOME/bin/cpconfig.txt" ]; then
     echo "state=update" > "$HOME/bin/cpconfig.txt"
 fi
