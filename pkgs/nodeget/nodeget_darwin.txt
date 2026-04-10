@@ -1,6 +1,4 @@
 bash
-/bin/bash -c "$(curl -fsSL https://githubusercontent.com)"
-bash
 brew install node
 bash
 node -v
