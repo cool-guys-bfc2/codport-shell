@@ -17,8 +17,7 @@ docmd() {
     "execlog") chmod +x "$target"; source "./$target" > "output.log" ;;
     "execarg") chmod +x "$target"; source "./$target" $args ;;
     "execute") chmod +x "$target"; source "./$target" $args > "output.log" ;;
-    "bash")    echo "$target" > "cache.sh"; bash "cache.sh" ;;
-    "basharg")    echo "$target" > "cache.sh"; bash "cache.sh" $args;;
+    "bash")    echo "$target" > "cache.sh"; bash "cache.sh" $args;;
   esac
 }
 
