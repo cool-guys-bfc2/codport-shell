@@ -6,11 +6,11 @@ term() {
   if [ '\$#' -eq 0 ]; then
     source ${fn}
   else
-    soruce ${fn} '\$#'
+    source ${fn} '\$#'
   fi
   }"
-  echo "$code" >> "$HOME/.bashrc"
-  echo "$code" >> "$HOME/.zshrc"
+  echo "${code}" >> "$HOME/.bashrc"
+  echo "${code}" >> "$HOME/.zshrc"
 }
 cmd() {
   local name="$1"
