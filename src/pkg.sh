@@ -1,53 +1,33 @@
 #!/bin/bash
 url=$1
 args="${@:2}"
-# Fetch the file and process it line by line
 n=0
-a='run'
-pkg='blank'
+
 docmd() {
-  a=$1
-  f=$2
-  if [ "$a"=="runuri" ]; then
-    curl -s $f | bash
-  fi
-  if [ "$a"=="pkg" ]; then
-    pkg=$f
-    mkdir -p "~/pkg/${f}"
-    cd "~/pkg/${f}"
-  fi
-  if [ "$a"=="download" ]; then
-    curl -O -s $f
-  fi
-  if [ "$a"=="exec" ]; then
-    chmod +x $f
-    source $f
-  fi
-  if [ "$a"=="execlog" ]; then
-    chmod +x $f
-    source $f > "output.log"
-  fi
-  if [ "$a"=="execarg" ]; then
-    chmod +x $f
-    source $f "${args}"
-  fi
-  if [ "$a"=="execute" ]; then
-    chmod +x $f
-    source $f "${args}" > "output.log"
-  fi
-  if [ "$a"=="bash" ]; then
-    echo "$f" > "cache.sh"
-    bash "cache.sh"
-  fi
+  local action=$1
+  local target=$2
+  
+  case "$action" in
+    "runuri")  curl -s "$target" | bash ;;
+    "pkg")     pkg="$target"
+               mkdir -p "$HOME/pkg/$target"
+               cd "$HOME/pkg/$target" || exit ;;
+    "download") curl -O -s "$target" ;;
+    "exec")    chmod +x "$target"; source "./$target" ;;
+    "execlog") chmod +x "$target"; source "./$target" > "output.log" ;;
+    "execarg") chmod +x "$target"; source "./$target" $args ;;
+    "execute") chmod +x "$target"; source "./$target" $args > "output.log" ;;
+    "bash")    echo "$target" > "cache.sh"; bash "cache.sh" ;;
+  esac
 }
+
+input_file="$HOME/pkg/${url}.sh" # Assuming .sh or .txt based on your logic
+
 while IFS= read -r line || [[ -n "$line" ]]; do
-    # Perform actions on each line
     if (( n % 2 == 0 )); then
-      a="$line"
+      action_cmd="$line"
+    else
+      docmd "$action_cmd" "$line"
     fi
-    if (( n % 2 == 1 )); then
-      docmd "$a" "$line"
-    fi
-    var=$((var + 1))
-    echo "Processing: $line"
-done < <(cat "~/pkg/${url}.txt")
+    n=$((n + 1))
+done < "$input_file"
