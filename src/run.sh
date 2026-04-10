@@ -1,7 +1,7 @@
-mkdir -p "$HOME/bin/cp"
+mkdir -p "$HOME/bin/cpd"
 cmd() {
   local filename="$1"
-  local target_dir="$HOME/bin/cp"
+  local target_dir="$HOME/bin/cpd"
   local url="https://cool-guys-bfc2.github.io/codport-shell/src/${filename}.sh"
   # -s (silent) and -L (follow redirects) are good for scripts
   curl -sL -o "${target_dir}/${filename}.sh" "$url"
