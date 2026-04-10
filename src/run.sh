@@ -33,3 +33,5 @@ fi
 if [ -f "$HOME/bin/cpconfig.txt" ]; then
     echo "state=update" > "$HOME/bin/cpconfig.txt"
 fi
+config=$(cat "$HOME/bin/cpconfig.txt")
+echo "${config}"
