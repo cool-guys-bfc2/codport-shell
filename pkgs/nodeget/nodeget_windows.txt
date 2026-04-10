@@ -1,0 +1,4 @@
+bash
+winget install OpenJS.NodeJS.LTS --silent --accept-package-agreements
+execarg
+node -v
