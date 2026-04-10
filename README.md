@@ -11,3 +11,5 @@ Install package from CP database
 Supported packages:
 python(equivalent to python3 installer)
 pyrun(equivalent to python3 runner)
+nodeget(equivalent to all NodeJS installing methods)
+node(equivalent to the NodeJS compiler)
