@@ -9,4 +9,5 @@ Install package manually
 Install package from CP database
 # CP Database
 Supported packages:
-python(equivalent to python3)
+python(equivalent to python3 installer)
+pyrun(equivalent to python3 runner)
