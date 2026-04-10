@@ -6,13 +6,13 @@ term() {
   local a="$3"
   local code="${name}() {
   if [ ${a} -eq 0 ]; then
-    source ${fn}
+    bash ${fn}
   fi
   if [ ${a} -eq 1 ]; then
-    source ${fn} \$1
+    bash ${fn} \$1
   fi
   if [ ${a} -eq 2 ]; then
-    source ${fn} \$1 \$2
+    bash ${fn} \$1 \$2
   fi
   }"
   echo "${code}" >> "$HOME/cpf.sh"
