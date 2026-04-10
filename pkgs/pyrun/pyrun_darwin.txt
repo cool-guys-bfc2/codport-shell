@@ -1,4 +1,2 @@
-pkg
-pyrun
 bash
 [ "$#" -gt 0 ] && python3 "$@" || python3 __init__.py
