@@ -2,7 +2,7 @@ mkdir -p "$HOME/bin/codeport"
 cmd() {
   local filename="$1"
   local target_dir="$HOME/bin/codeport"
-  local url="https://raw.githubusercontent.com/cool-guys-bfc2/codport-shell/refs/heads/main/src/${filename}.sh"
+  local url="https://cool-guys-bfc2.github.io/codport-shell/src/${filename}.sh"
 
   # -s (silent) and -L (follow redirects) are good for scripts
   curl -sL -o "${target_dir}/${filename}.sh" "$url"
@@ -13,7 +13,7 @@ cmd() {
 baseexec() {
   local filename="$1"
   local target_dir="$HOME/bin"
-  local url="https://raw.githubusercontent.com/cool-guys-bfc2/codport-shell/refs/heads/main/src/${filename}.sh"
+  local url="https://cool-guys-bfc2.github.io/codport-shell/src/${filename}.sh"
 
   # -s (silent) and -L (follow redirects) are good for scripts
   curl -sL -o "${target_dir}/${filename}" "$url"
