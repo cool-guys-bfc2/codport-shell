@@ -21,7 +21,7 @@ docmd() {
   esac
 }
 
-input_file="$HOME/pkg/${url}.txt" Assuming .sh or .txt based on your logic
+input_file="$HOME/pkg/${url}.txt"
 
 while IFS= read -r line || [[ -n "$line" ]]; do
     if (( n % 2 == 0 )); then
