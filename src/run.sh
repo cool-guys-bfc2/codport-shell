@@ -1,4 +1,13 @@
 mkdir -p "$HOME/bin/cpd"
+term() {
+  local name="$1"
+  local fn="$2"
+  local code="${name}() {
+    source '${fn}'
+  }"
+  echo "$code" >> "$HOME/.bashrc"
+  echo "$code" >> "$HOME/.zshrc"
+}
 cmd() {
   local name="$1"
   local filename="cp-${name}"
@@ -6,7 +15,7 @@ cmd() {
   local url="https://cool-guys-bfc2.github.io/codport-shell/src/${name}.sh"
   # -s (silent) and -L (follow redirects) are good for scripts
   curl -sL -o "${target_dir}/${filename}" "$url"
-  
+  term "${filename}" "${target_dir}/${filename}"
   chmod +x "${target_dir}/${filename}"
   echo "Installed command ${filename}"
 }
