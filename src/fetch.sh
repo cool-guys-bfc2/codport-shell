@@ -1,6 +1,26 @@
-mkdir -p '~/pkg'
+#!/bin/bash
+
+# 1. Ensure the local directory exists
+mkdir -p "$HOME/pkg"
+
 name=$1
-url="https://raw.githubusercontent.com/cool-guys-bfc2/codport-shell/refs/heads/main/pkgs/${name}/${name}.txt"
+# 2. Detect the operating system
+os_type=$(uname -s | tr '[:upper:]' '[:lower:]')
+
+# 3. Construct the system-dependent URL
+# This assumes you have files like 'package_linux.txt' or 'package_darwin.txt'
+url="https://raw.githubusercontent.com/cool-guys-bfc2/codport-shell/refs/heads/main/pkgs/${name}/${name}_${os_type}.txt"
+
+echo "Detected OS: ${os_type}"
 echo "Installing package at ${url} as ${name}!"
-response=$(curl -s "${url}")
-echo "$response" > "~/pkg/${name}.txt"
+
+# 4. Fetch the file and save it locally
+response=$(curl -s --fail "${url}")
+
+if [ $? -eq 0 ]; then
+  echo "$response" > "$HOME/pkg/${name}.txt"
+  echo "Successfully saved to ~/pkg/${name}.txt"
+else
+  echo "Error: Could not find a package file for your system at ${url}"
+  exit 1
+fi
