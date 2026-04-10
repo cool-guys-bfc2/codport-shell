@@ -13,9 +13,10 @@ cmd() {
 cmd pkg
 cmd install
 cmd fetch
+source "$HOME/.bashrc"
 if [ ! -f "$HOME/bin/cpconfig.txt" ]; then
+    echo "export PATH=$PATH:$HOME/bin" >> "$HOME/.bashrc"
     echo "state=new" > "$HOME/bin/cpconfig.txt"
-    source ~/.bashrc
 fi
 if [ -f "$HOME/bin/cpconfig.txt" ]; then
     echo "state=update" > "$HOME/bin/cpconfig.txt"
