@@ -13,6 +13,8 @@ Install package from CP database
 Delete package
 **cp-update**
 Update Codeport
+**cp-configure**
+Configure Codeport Settings & MetaData
 # CP Database
 Supported packages:
 python(equivalent to python3 installer)
