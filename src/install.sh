@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir -p '~/pkg'
 name=$1
 url=$2
