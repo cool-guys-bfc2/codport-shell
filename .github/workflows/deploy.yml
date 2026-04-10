@@ -1,0 +1,32 @@
+name: Deploy Files
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: [actions/checkout](https://github.com)@v4
+
+      - name: Create .nojekyll
+        run: touch .nojekyll
+
+      - name: Setup Pages
+        uses: [actions/configure-pages](https://github.com)@v4
+
+      - name: Upload artifact
+        uses: [actions/upload-pages-artifact](https://github.com)@v3
+        with:
+          # Path to the directory containing your files
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: [actions/deploy-pages](https://github.com/actions/deploy-pages)@v4
