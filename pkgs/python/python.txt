@@ -1,2 +1,4 @@
 pkg
 python3-mac
+download
+https://raw.githubusercontent.com/python/cpython/refs/heads/main/install-sh
