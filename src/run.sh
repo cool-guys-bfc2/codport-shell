@@ -3,7 +3,11 @@ term() {
   local name="$1"
   local fn="$2"
   local code="${name}() {
-    source '${fn}'
+  if [ '\$#' -eq 0 ]; then
+    source ${fn}
+  else
+    soruce ${fn} '\$#'
+  fi
   }"
   echo "$code" >> "$HOME/.bashrc"
   echo "$code" >> "$HOME/.zshrc"
