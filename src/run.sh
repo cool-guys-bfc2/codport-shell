@@ -4,9 +4,13 @@ term() {
   local fn="$2"
   local code="${name}() {
   if [ '\$#' -eq 0 ]; then
-    source ${fn}
-  else
-    source ${fn} '\${@}'
+    source \${fn}
+  fi
+  if [ '\$#' -eq 1 ]; then
+    source \${fn} '\$1'
+  fi
+  if [ '\$#' -eq 2 ]; then
+    source \${fn} '\$1' '\$2'
   fi
   }"
   echo "${code}" >> "$HOME/.bashrc"
