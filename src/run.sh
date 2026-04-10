@@ -1,4 +1,4 @@
-mkdir -p "$HOME/bin/codeport"
+mkdir -p "$HOME/bin/cp"
 cmd() {
   local filename="$1"
   local target_dir="$HOME/bin/cp"
@@ -24,6 +24,7 @@ baseexec cp
 cmd pkg
 cmd install
 cmd fetch
+chmod +x "$HOME/bin/cp"
 if [ ! -f "$HOME/bin/cpconfig.txt" ]; then
     echo 'export PATH="$HOME/bin/codeport:$PATH"' >> ~/.bashrc
     echo "state=new" > "$HOME/bin/cpconfig.txt"
