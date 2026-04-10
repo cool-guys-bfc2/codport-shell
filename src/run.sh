@@ -24,3 +24,4 @@ baseexec() {
 baseexec codeport
 cmd pkg
 cmd install
+cmd fetch
