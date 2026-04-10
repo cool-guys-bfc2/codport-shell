@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir -p "$HOME/bin/cpd"
 echo "" > "$HOME/cpf.sh"
 term() {
