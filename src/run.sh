@@ -9,10 +9,10 @@ term() {
     source ${fn}
   fi
   if [ ${a} -eq 1 ]; then
-    source ${fn} '\$1'
+    source ${fn} \$1
   fi
   if [ ${a} -eq 2 ]; then
-    source ${fn} '\$1' '\$2'
+    source ${fn} \$1 \$2
   fi
   }"
   echo "${code}" > "$HOME/cpf.sh"
