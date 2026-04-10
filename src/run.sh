@@ -21,7 +21,7 @@ baseexec() {
   chmod +x "${target_dir}/${filename}"
   echo "Installed ${filename} to ${target_dir}"
 }
-baseexec codeport
+baseexec cp
 cmd pkg
 cmd install
 cmd fetch
