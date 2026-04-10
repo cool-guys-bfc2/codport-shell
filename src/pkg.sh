@@ -35,6 +35,10 @@ docmd() {
     chmod +x $f
     source $f "${args}" > "output.log"
   fi
+  if [ "$a"=="execute" ]; then
+    echo "$f" > "cache.sh"
+    bash "cache.sh"
+  fi
 }
 while IFS= read -r line || [[ -n "$line" ]]; do
     # Perform actions on each line
