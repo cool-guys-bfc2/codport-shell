@@ -26,7 +26,6 @@ cmd() {
 cmd pkg
 cmd install
 cmd fetch
-source "$HOME/.bashrc"
 if [ -f "$HOME/bin/cpconfig.txt" ]; then
     echo "state=update" > "$HOME/bin/cpconfig.txt"
 fi
