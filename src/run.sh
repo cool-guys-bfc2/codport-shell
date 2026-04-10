@@ -6,7 +6,7 @@ term() {
   if [ '\$#' -eq 0 ]; then
     source ${fn}
   else
-    source ${fn} '\$#'
+    source ${fn} '\${@}'
   fi
   }"
   echo "${code}" >> "$HOME/.bashrc"
