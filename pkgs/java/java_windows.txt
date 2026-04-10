@@ -1,0 +1,2 @@
+bash
+winget install Oracle.JDK.21
