@@ -1,0 +1,2 @@
+bash
+winget install --exact PrismLauncher.PrismLauncher
