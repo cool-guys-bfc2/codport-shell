@@ -1,4 +1,4 @@
 pkg
 pyrun
 bash
-python3 __init__.py
+[ "$#" -gt 0 ] && python3 "$@" || python3 __init__.py
