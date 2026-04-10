@@ -1,8 +1,4 @@
-pkg
-python3-linux
-download
-https://raw.githubusercontent.com/python/cpython/refs/heads/main/install-sh
 bash
-mv install-sh.txt install-sh.sh
-exec
-install-sh.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+bash
+brew install python
