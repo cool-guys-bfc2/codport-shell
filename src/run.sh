@@ -26,7 +26,7 @@ cmd pkg
 cmd install
 cmd fetch
 if [ ! -f "$HOME/bin/cpconfig.txt" ]; then
-    echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+    echo 'export PATH="$HOME/bin/codeport:$PATH"' >> ~/.bashrc
     echo "state=new" > "$HOME/bin/cpconfig.txt"
     source ~/.bashrc
 fi
