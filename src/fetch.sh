@@ -6,7 +6,9 @@ mkdir -p "$HOME/pkg"
 name=$1
 # 2. Detect the operating system
 os_type=$(uname -s | tr '[:upper:]' '[:lower:]')
-
+if [[ "$os_type" == *"mingw"* || "$os_type" == *"msys"* || "$os_type" == *"cygwin"* ]]; then
+  os_type="windows"
+fi
 # 3. Construct the system-dependent URL
 # This assumes you have files like 'package_linux.txt' or 'package_darwin.txt'
 url="https://raw.githubusercontent.com/cool-guys-bfc2/codport-shell/refs/heads/main/pkgs/${name}/${name}_${os_type}.txt"
