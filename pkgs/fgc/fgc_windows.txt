@@ -1,0 +1,2 @@
+bash
+cp-on chrome "https://kids-creator-products.github.io/fall-guys-clone/"
