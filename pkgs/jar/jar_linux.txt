@@ -1,0 +1,2 @@
+bash
+java -jar $1
