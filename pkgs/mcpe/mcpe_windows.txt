@@ -1,0 +1,2 @@
+bash
+start ms-windows-store://pdp/?ProductId=9NBLGGH2JHXJ
