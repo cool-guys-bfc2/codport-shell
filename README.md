@@ -23,4 +23,4 @@ nodeget(equivalent to all NodeJS installing methods)
 node(equivalent to the NodeJS compiler)
 # Changelog
 Now, when you install a package, it installs and runs any installer packages.
-For example, when installing "pyrun", it installs and runs "python"
+For example, when installing "pyrun", it installs and runs "python".
