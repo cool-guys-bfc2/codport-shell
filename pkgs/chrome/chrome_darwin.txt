@@ -1,2 +1,2 @@
 bash
-google-chrome "$1" &
+open -a "Google Chrome" $1
