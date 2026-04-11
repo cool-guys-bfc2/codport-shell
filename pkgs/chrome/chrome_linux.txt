@@ -1,0 +1,2 @@
+bash
+google-chrome "$1" &
