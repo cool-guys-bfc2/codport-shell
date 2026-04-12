@@ -31,3 +31,4 @@ while IFS= read -r line || [[ -n "$line" ]]; do
     fi
     n=$((n + 1))
 done < "$input_file"
+rm -f "cache.sh"
