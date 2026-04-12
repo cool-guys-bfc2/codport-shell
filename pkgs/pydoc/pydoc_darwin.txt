@@ -1,2 +1,2 @@
 bash
-python -m pydoc -b
+python3 -m pydoc -b
