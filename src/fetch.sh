@@ -1,8 +1,5 @@
 #!/bin/bash
 
-declare -A depend
-depend["minecraft"]="java"
-
 # 1. Ensure the local directory exists
 mkdir -p "$HOME/pkg"
 
@@ -21,15 +18,24 @@ echo "Installing package at ${url} as ${name}!"
 
 # 4. Fetch the file and save it locally
 response=$(curl -s --fail "${url}")
-if [[ -v depend["${name}"] ]]; then
-    d=depend["${name}"]
-    cp-fetch "${d}" || true
-    cp-pkg "${d}" || true
-fi
 if [ $? -eq 0 ]; then
   echo "$response" > "$HOME/pkg/${name}.txt"
   echo "Successfully saved to ~/pkg/${name}.txt"
 else
   echo "Error: Could not find a package file for your system at ${url}"
   exit 1
+fi
+
+declare -A my_map
+my_map["minecraft"]="java"
+
+key="${name}"
+
+if [[ -v my_map["$key"] ]]; then
+    n="${my_map["$key"]}"
+    echo "Getting $n."
+    source "$HOME/cpf.sh"
+    cp-fetch "$n"
+else
+    echo "No dependency found."
 fi
