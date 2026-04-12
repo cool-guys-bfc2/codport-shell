@@ -37,10 +37,10 @@ cmd on 2
 cmd delete 1
 cmd update 0
 cmd configure 0
-local url="https://cool-guys-bfc2.github.io/codport-shell/src/depend.sh"
-local filename="depend.sh"
-local target_dir="$HOME/bin"
-curl -sL -o "${target_dir}/${filename}" "$url"
+local urln="https://cool-guys-bfc2.github.io/codport-shell/src/depend.sh"
+local filenamen="depend.sh"
+local target_dirn="$HOME/bin"
+curl -sL -o "${target_dirn}/${filenamen}" "$urln"
 if [ -f "$HOME/bin/cpconfig.txt" ]; then
     echo "state=update" > "$HOME/bin/cpconfig.txt"
 fi
