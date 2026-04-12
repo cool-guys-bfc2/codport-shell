@@ -1,0 +1,8 @@
+bash
+curl -o bds.zip -sL https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.26.14.1.zip
+bash
+python3 -m zipfile -e bds.zip bds/
+bash
+cd bds
+bash
+./bedrock_server
