@@ -1,3 +1,3 @@
 #!/bin/bash
 pkg=$1
-rm "~/pkg/${pkg}.txt"
+rm -f "$HOME/pkg/${pkg}.txt"
