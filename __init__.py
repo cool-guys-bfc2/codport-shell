@@ -13,4 +13,4 @@ code="""install() {
   echo "Job complete"
 }
 install run.sh"""
-print(os.popen(code))
+print(os.popen(code).read())
