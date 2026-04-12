@@ -12,9 +12,11 @@ Install package from CP database
 **cp-delete [package name]**
 Delete package
 **cp-update**
-Update Codeport
+Update Codport
 **cp-configure**
-Configure Codeport Settings & MetaData
+Configure Codport Settings & MetaData
+**cp-list**
+List Installed Codport Packages 
 # CP Database
 Supported packages:
 python(equivalent to python3 installer)
