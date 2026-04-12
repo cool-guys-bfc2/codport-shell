@@ -1,2 +1,2 @@
 bash
-bash -c "./$1.exe"
+bash -c "./$1.exe &"
