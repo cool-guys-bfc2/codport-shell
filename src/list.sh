@@ -5,4 +5,4 @@ echo "Packages Installed: "
 for f in *; do
     echo "${f%.*}"
 done
-cd d
+cd "${d}"
