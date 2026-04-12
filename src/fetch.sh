@@ -18,24 +18,6 @@ echo "Installing package at ${url} as ${name}!"
 
 # 4. Fetch the file and save it locally
 response=$(curl -s --fail "${url}")
-curl -o config.txt -s --fail "https://cool-guys-bfc2.github.io/codport-shell/pkgs/config.txt
-FILE="config.txt"
-TARGET_KEY=$name
-VALUE="no"  # Initialize with default
-
-while IFS='=' read -r key val; do
-    # Strip potential whitespace from key
-    key=$(echo "$key" | xargs)
-    if [[ "$key" == "$TARGET_KEY" ]]; then
-        VALUE="$val"
-        break
-    fi
-done < "$FILE"
-if [[ "$VALUE" != "no" ]]; then
-    n="$VALUE"
-    cp-fetch "$n"
-    cp-pkg "$n"
-fi
 
 
 if [ $? -eq 0 ]; then
