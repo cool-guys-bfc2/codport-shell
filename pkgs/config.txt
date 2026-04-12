@@ -1,5 +1,1 @@
-node=nodeget
-jar=java
-pyrun=python
-ws=pyrun
 minecraft=java
