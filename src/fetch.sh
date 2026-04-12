@@ -25,17 +25,3 @@ else
   echo "Error: Could not find a package file for your system at ${url}"
   exit 1
 fi
-
-declare -A my_map
-my_map["minecraft"]="java"
-
-key="${name}"
-
-if [[ -v my_map["$key"] ]]; then
-    n="${my_map["$key"]}"
-    echo "Getting $n."
-    source "$HOME/cpf.sh"
-    cp-fetch "$n"
-else
-    echo "No dependency found."
-fi
