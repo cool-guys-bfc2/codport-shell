@@ -1,2 +1,2 @@
 bash
-python -m tarfile -e "$1.tar.gz"
+python3 -m tarfile -e "$1.tar.gz"
