@@ -18,8 +18,12 @@ echo "Installing package at ${url} as ${name}!"
 
 # 4. Fetch the file and save it locally
 response=$(curl -s --fail "${url}")
-
-
+source "$HOME/bin/depend.sh" || true
+if [[ -v depend["${name}"] ]]; then
+    d=depend["${name}"] || true
+    cp-fetch "${d}" || true
+    cp-pkg "${d}" || true
+fi
 if [ $? -eq 0 ]; then
   echo "$response" > "$HOME/pkg/${name}.txt"
   echo "Successfully saved to ~/pkg/${name}.txt"
