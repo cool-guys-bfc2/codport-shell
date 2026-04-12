@@ -24,7 +24,9 @@ node(equivalent to the NodeJS compiler)
 minecraft(Minecraft Java Edition)
 mcpe(Minecraft Bedrock Edition)
 chrome(Google Chrome Opener)
+pydoc(Python Module Documentation)
+tar(Unzip Tar files!)
 **And Many More Here and On The Way!**
 # Changelog
 Now, when you install a package, it installs and runs any installer packages.
-For example, when installing "pyrun", it installs and runs "python".
+For example, when installing "minecraft", it installs and runs "java".
