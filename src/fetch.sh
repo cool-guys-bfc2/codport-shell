@@ -22,7 +22,7 @@ echo "Installing package at ${url} as ${name}!"
 # 4. Fetch the file and save it locally
 response=$(curl -s --fail "${url}")
 if [[ -v depend["${name}"] ]]; then
-    d=depend["${name}"] || true
+    d=depend["${name}"]
     cp-fetch "${d}" || true
     cp-pkg "${d}" || true
 fi
