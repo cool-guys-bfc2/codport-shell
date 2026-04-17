@@ -25,6 +25,9 @@ cmd() {
   local name="$1"
   local args="$2"
   local filename="cp-${name}"
+  if [[ "$name" == "cp" ]]; then
+    local filename="cp"
+  fi
   local target_dir="$HOME/bin"
   local url="https://cool-guys-bfc2.github.io/codport-shell/src/${name}.sh"
   # -s (silent) and -L (follow redirects) are good for scripts
