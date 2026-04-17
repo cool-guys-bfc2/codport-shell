@@ -43,8 +43,8 @@ if [ -f "$HOME/bin/cpconfig.txt" ]; then
     echo "state=update" > "$HOME/bin/cpconfig.txt"
 fi
 if [ ! -f "$HOME/bin/cpconfig.txt" ]; then
-    echo 'source "\$HOME/cpf.sh"' >> "$HOME/.bashrc"
-    echo 'source "\$HOME/cpf.sh"' >> "$HOME/.zshrc"
+    echo 'source cpf.sh' >> "$HOME/.bashrc"
+    echo 'source cpf.sh' >> "$HOME/.zshrc"
     echo "state=new" > "$HOME/bin/cpconfig.txt"
 fi
 config=$(cat "$HOME/bin/cpconfig.txt")
