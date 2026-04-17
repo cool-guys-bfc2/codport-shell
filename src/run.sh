@@ -38,6 +38,7 @@ cmd delete 1
 cmd update 0
 cmd configure 0
 cmd list 0
+cmd make 1
 curl -sL -o "$HOME/bin/depend.sh" "https://cool-guys-bfc2.github.io/codport-shell/src/depend.sh"
 if [ -f "$HOME/bin/cpconfig.txt" ]; then
     echo "state=update" > "$HOME/bin/cpconfig.txt"
