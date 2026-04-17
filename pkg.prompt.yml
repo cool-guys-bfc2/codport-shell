@@ -1,0 +1,6 @@
+messages:
+  - role: system
+    content: You are a one line bash code generator
+  - role: user
+    content: Create a one line bash script to {{task}} for windows, linux, and macos
+model: openai/gpt-4o
