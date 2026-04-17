@@ -4,3 +4,7 @@ messages:
   - role: user
     content: Create a one line bash script to {{task}} for windows, linux, and macos
 model: openai/gpt-4o
+responseFormat: text
+modelParameters:
+  max_tokens: 4090
+  temperature: 0.59
