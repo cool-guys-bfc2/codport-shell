@@ -1,4 +1,4 @@
 #!/bin/bash
 SUBCOMMAND=$1
 shift  # Remove the subcommand from the argument list
-bash "$HOME/bin/cpd/${SUBCOMMAND}.sh" "$@"
+bash "$HOME/bin/cpd/${SUBCOMMAND}" "$@"
