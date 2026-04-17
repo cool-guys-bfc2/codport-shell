@@ -15,6 +15,9 @@ term() {
   if [ ${a} -eq 2 ]; then
     bash ${fn} \$1 \$2
   fi
+  if [ ${a} -eq 3 ]; then
+    bash ${fn} \$@
+  fi
   }"
   echo "${code}" >> "$HOME/cpf.sh"
 }
@@ -39,6 +42,7 @@ cmd update 0
 cmd configure 0
 cmd list 0
 cmd make 1
+cmd cp 3
 curl -sL -o "$HOME/bin/depend.sh" "https://cool-guys-bfc2.github.io/codport-shell/src/depend.sh"
 if [ -f "$HOME/bin/cpconfig.txt" ]; then
     echo "state=update" > "$HOME/bin/cpconfig.txt"
