@@ -1,0 +1,2 @@
+bash
+python3 -m zipfile -e "$1.zip"  "$1"
