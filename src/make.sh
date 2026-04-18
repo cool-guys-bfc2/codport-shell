@@ -13,9 +13,9 @@ tar -xvzf "$FILE" -C "$DEST"
 for file in *; do
     if [[ -f "$file" ]]; then
         if [[ "$file" == *.txt ]]; then
-            cp "$file" "$HOME/pkg"
+            mv "$file" "$HOME/pkg"
         else
-            cp "$file" "$HOME/bin/cod-$1/exec"
+            mv "$file" "$HOME/bin/cod-$1/exec"
         fi
     fi
 done
