@@ -1,6 +1,6 @@
 #!/bin/bash
 # Define variables
-FILE="$1.tar.gz"
+FILE="$1.tar.xz"
 DEST="codapp"
 mkdir -p "$HOME/bin/cod-$1/"
 mkdir -p "$HOME/bin/cod-$1/exec"
