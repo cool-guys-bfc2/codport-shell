@@ -17,6 +17,8 @@ Update Codport
 Configure Codport Settings & MetaData
 **cp-list**
 List Installed Codport Packages 
+**cp-make  [filename]**
+Install .tar.gz file containing txt package instructions
 # CP Database
 Supported packages:
 python(equivalent to python3 installer)
