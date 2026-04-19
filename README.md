@@ -32,5 +32,6 @@ pydoc(Python Module Documentation)
 tar(Unzip Tar files!)
 **And Many More Here and On The Way!**
 # Creating downloadable tar.gz packages
-Fill with package instructions as .txt files, other files are moved in a special folder.
+Fill with package instructions as .txt files, other files are moved in a special folder(~/bin/cod-[name]/exec).
 Compress tar.gz, but make sure users do not rename the file, as the source folder is based on the filename(without extension)
+Or you can run **cp-build [filename without extension]** to to make a tar.gz from a .txt file!
