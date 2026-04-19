@@ -1,0 +1,2 @@
+bash
+case "$(uname)" in Linux*) chromium "$1" ;; Darwin*) open -a "Google Chrome" "$1" ;; CYGWIN*|MINGW*|MSYS*) start chrome "$1" ;; esac
