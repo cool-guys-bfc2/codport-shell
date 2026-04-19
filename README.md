@@ -31,3 +31,6 @@ chrome(Google Chrome Opener)
 pydoc(Python Module Documentation)
 tar(Unzip Tar files!)
 **And Many More Here and On The Way!**
+# Creating downloadable tar.gz packages
+Fill with package instructions as .txt files, other files are moved in a special folder.
+Compress tar.gz, but make sure users do not rename the file, as the source folder is based on the filename(without extension)
