@@ -14,8 +14,10 @@ for file in *; do
     if [[ -f "$file" ]]; then
         if [[ "$file" == *.txt ]]; then
             mv "$file" "$HOME/pkg"
+            echo "Installed package ${file}!"
         else
             mv "$file" "$HOME/bin/cod-$1/exec"
+            echo "Installed source code ${file}!"
         fi
     fi
 done
