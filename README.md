@@ -17,7 +17,7 @@ Update Codport
 Configure Codport Settings & MetaData
 **cp-list**
 List Installed Codport Packages 
-**cp-make  [filename]**
+**cp-make  [filename without extension]**
 Install .tar.gz file containing txt package instructions
 # CP Database
 Supported packages:
