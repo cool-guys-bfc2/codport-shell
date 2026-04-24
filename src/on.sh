@@ -2,7 +2,7 @@
 url=$1
 args="$2"
 n=0
-
+exp="$HOME/bin/cod-$1/exec"
 docmd() {
   local action=$1
   local target=$2
