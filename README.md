@@ -19,6 +19,8 @@ Configure Codport Settings & MetaData
 List Installed Codport Packages 
 **cp-make  [filename without extension]**
 Install .tar.gz file containing txt package instructions
+**cp-add [set name]**
+Install .tar.gz file containing txt package instructions, from the hosted sets of multiple packages
 # CP Database
 Supported packages:
 python(equivalent to python3 installer)
