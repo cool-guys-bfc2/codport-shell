@@ -1,2 +1,2 @@
 #!/bin/bash
-nano "$HOME/bin/cpconfig.txt"
+subl "$HOME/bin/cpconfig.txt"
