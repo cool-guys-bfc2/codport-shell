@@ -25,3 +25,17 @@ else
   echo "Error: Could not find a package file for your system at ${url}"
   exit 1
 fi
+# 5. Try Univeral Installation
+url="https://cool-guys-bfc2.github.io/codport-pkg/${name}/${name}_all.txt"
+
+echo "Detected OS: all"
+echo "Installing package at ${url} as U${name}!"
+
+response=$(curl -s --fail "${url}")
+if [ $? -eq 0 ]; then
+  echo "$response" > "$HOME/pkg/U${name}.txt"
+  echo "Successfully saved to ~/pkg/U${name}.txt"
+else
+  echo "Error: Could not find a package file for your system at ${url}"
+  exit 1
+fi
