@@ -49,6 +49,7 @@ cmd cp 3
 cmd build 1
 cmd add 1
 cmd global 1
+cmd get 1
 curl -sL -o "$HOME/bin/depend.sh" "https://cool-guys-bfc2.github.io/codport-shell/src/depend.sh"
 if [ -f "$HOME/bin/cpconfig.txt" ]; then
     echo "state=update" > "$HOME/bin/cpconfig.txt"
