@@ -37,3 +37,6 @@ tar(Unzip Tar files!)
 Fill with package instructions as .txt files, other files are moved in a special folder(~/bin/cod-[name]/exec).
 Compress tar.gz, but make sure users do not rename the file, as the source folder is based on the filename(without extension)
 Or you can run **cp-build [filename without extension]** to to make a tar.gz from a .txt file!
+# Getting Codport
+Run the bash file out of /src/, it will install the /src/ for you.
+To easily run packages on Mac run the **"CP-Run Package.app.zip"**.
